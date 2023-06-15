@@ -6,15 +6,22 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules server.ts",
+    "lint": "eslint server/** --no-fix --max-warnings 0 && tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "inversify": "^6.0.1",
+    "prettier": "^2.8.8",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
+    "@types/eslint": "^8.40.2",
     "@types/express": "^4.17.17",
+    "@types/prettier": "^2.7.3",
+    "eslint": "^8.42.0",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.3"
